@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "f",
+    "f",
+    "s"
+  ],
+
+  "key": {
+    "f": {"item": "elementoresmod:firestone"},
+
+    "s": {"item": "minecraft:stick"}
+  },
+
+  "result": {"item": "elementoresmod:firestone_sword"}
+}
