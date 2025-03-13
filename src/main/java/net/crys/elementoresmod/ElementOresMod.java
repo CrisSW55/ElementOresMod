@@ -1,10 +1,9 @@
 package net.crys.elementoresmod;
 
 import com.mojang.logging.LogUtils;
-import net.crys.elementoresmod.item.ModCreativeTabs;
-import net.crys.elementoresmod.item.ModItems;
+import net.crys.elementoresmod.item.custom.ModCreativeTabs;
+import net.crys.elementoresmod.item.custom.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -45,6 +44,7 @@ public class ElementOresMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.FIRE_STONE);
+            event.accept(ModItems.FIRE_STONE_SWORD);
             event.accept(Items.AMETHYST_SHARD); // Takes in an ItemLike, assumes block has registered item
         }
     }

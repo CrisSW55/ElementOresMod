@@ -1,4 +1,4 @@
-package net.crys.elementoresmod.item;
+package net.crys.elementoresmod.item.custom;
 
 import net.crys.elementoresmod.ElementOresMod;
 import net.minecraft.core.registries.Registries;
@@ -20,7 +20,7 @@ public class ModCreativeTabs {
             // Set name of tab to display
             .title(Component.translatable("creativetab.elementores_tab"))
             // Set icon of creative tab
-            .icon(() -> new ItemStack(ModItems.FIRE_STONE.get()))
+            .icon(() -> new ItemStack(ModItems.FIRE_STONE_SWORD.get()))
             // Add default items to tab
             .displayItems((params, output) -> {
                 output.accept(ModItems.FIRE_STONE.get());
