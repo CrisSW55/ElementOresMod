@@ -1,6 +1,7 @@
 package net.crys.elementoresmod;
 
 import com.mojang.logging.LogUtils;
+import net.crys.elementoresmod.block.ModBlocks;
 import net.crys.elementoresmod.item.custom.ModCreativeTabs;
 import net.crys.elementoresmod.item.custom.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,15 +27,17 @@ public class ElementOresMod {
     private static final Logger LOGGER = LogUtils.getLogger();
     public ElementOresMod(){
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ModCreativeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
 
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-    }
+}
 
     private void commonSetup(final FMLCommonSetupEvent event){
 
@@ -46,6 +49,7 @@ public class ElementOresMod {
             event.accept(ModItems.FIRE_STONE);
             event.accept(ModItems.FIRE_STONE_SWORD);
             event.accept(Items.AMETHYST_SHARD); // Takes in an ItemLike, assumes block has registered item
+            event.accept(ModBlocks.FIRESTONE_ORE);
         }
     }
 

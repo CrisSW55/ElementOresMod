@@ -26,7 +26,8 @@ public class ModItems {
                             ModToolTiers.FIRESTONE,
                             10,
                             5,
-                            new Item.Properties()));
+                            new Item.Properties())
+                        );
 
     public static void register(IEventBus eventBus){ITEMS.register(eventBus);}
 

@@ -1,6 +1,7 @@
 package net.crys.elementoresmod.item.custom;
 
 import net.crys.elementoresmod.ElementOresMod;
+import net.crys.elementoresmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -26,6 +27,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.FIRE_STONE.get());
                 output.accept(ModItems.FIRE_STONE_SWORD.get());
                 output.accept(Items.AMETHYST_SHARD);
+                output.accept(ModBlocks.FIRESTONE_ORE.get());
             })
             .build());
 

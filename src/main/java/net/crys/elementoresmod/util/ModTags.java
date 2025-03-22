@@ -15,6 +15,11 @@ public class ModTags {
                 tag("needs_firestone_tool");
 
         private static TagKey<Block> tag(String name){
+            // Found in the: net.minecraft.tags.BlockTags;
+            //The method below creates TagKey<Block>
+            //public static TagKey<Block> create(ResourceLocation name) {
+            //        return TagKey.create(Registries.BLOCK, name);
+            //    }
             return BlockTags.create(new ResourceLocation(ElementOresMod.MOD_ID,name));
         }
     }

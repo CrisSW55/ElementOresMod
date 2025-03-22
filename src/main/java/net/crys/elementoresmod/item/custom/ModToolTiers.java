@@ -19,7 +19,11 @@ public class ModToolTiers implements Tier {
                     5,
                     4,
                     25,
-                    ModTags.Blocks.NEEDS_FIRESTONE_TOOL,()-> Ingredient.of(ModItems.FIRE_STONE.get())),
+                    ModTags.Blocks.NEEDS_FIRESTONE_TOOL,
+                    ()-> Ingredient.of(ModItems.FIRE_STONE.get())
+            ),
+                    // pNamespace = MOD_ID
+                    // pPath = specifies location of resource, file name or subfolder
                     new ResourceLocation(ElementOresMod.MOD_ID,"firestone"),
                     List.of(Tiers.NETHERITE),
                     List.of()
